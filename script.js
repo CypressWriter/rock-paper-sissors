@@ -23,11 +23,27 @@ function computerPlay() {
     return result;
 }
 
+
+/*
 function playerPlay() {
     let result = window.prompt("Rock, paper, or sissors?");
     result = result.toLowerCase();
     return result;
 }
+*/
+
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let sissors = document.getElementById("sissors");
+
+rock.addEventListener("click", function () {playerPlay("rock")});
+paper.addEventListener("click", function () {playerPlay("paper")});
+sissors.addEventListener("click", function () {playerPlay("sissors")});
+
+function playerPlay (selection) {
+    playerSelection = selection;
+    console.log(playerSelection);
+};
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock") {
@@ -67,6 +83,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
+
+/*
 function game() {
     for (let i = 0; i < scoreToWin; i++) {
         console.log (playRound(playerPlay(), computerPlay()));
@@ -74,3 +93,4 @@ function game() {
 }
 
 game();
+*/
